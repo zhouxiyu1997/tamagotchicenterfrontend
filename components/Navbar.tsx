@@ -11,6 +11,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import { Fullscreen } from "lucide-react";
 
 interface NavItem {
   name: string;
@@ -41,7 +42,7 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <NavigationMenu>
+    <NavigationMenu className="w-full right-0">
       <NavigationMenuList>
         {navItems.map((item) => (
           <NavigationMenuItem key={item.path}>
